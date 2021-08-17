@@ -1,0 +1,46 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appName": {
+            "type": "string",
+            "metadata": {
+                "description": "アプリケーション名"
+            }
+        }
+    },
+    "variables": {
+        "appServicePlanPortalName": "[concat('AppServicePlan-', parameters('appName'))]"
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Web/serverfarms",
+            "apiVersion": "2020-12-01",
+            "name": "[variables('appServicePlanPortalName')]",
+            "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "D1"
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "apiVersion": "2020-12-01",
+            "name": "[parameters('appName')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms',concat('AppServicePlan-', parameters('appName')))]"
+            ],
+            "kind": "app",
+            "properties": {
+                "enabled": true,
+                "siteConfig": {
+                    "numberOfWorkers": 1,
+                    "alwaysOn": false
+                },
+                "keyVaultReferenceIdentity": "SystemAssigned",
+                "httpsOnly": false,
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms',concat('AppServicePlan-', parameters('appName')))]"
+            }
+        }
+    ]
+}
