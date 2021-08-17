@@ -56,7 +56,7 @@ Access to [https://localhost:5001/](https://localhost:5001/).
 
 ### 3. Create Azure resources
 
-Just click [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fgithub.com%2Fkohei3110%2Fauth-app-service%2Fblob%2Fmaster%2Fazure-templates%2Fwebapp.json) button in `azure-templates/README.md`.
+Just click [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkohei3110%2Fauth-app-service%2Fmaster%2Fazure-templates%2Fwebapp.json) button in `azure-templates/README.md`.
 
 ### 4. Deploy to Web Apps with Visual Studio Code
 
