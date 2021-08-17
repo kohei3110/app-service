@@ -60,7 +60,7 @@ Just click ![Deploy to Azure](https://aka.ms/deploytoazurebutton) button in `azu
 
 ### 4. Deploy to Web Apps with Visual Studio Code
 
-Install Azure Extension if not yet ([How to install](https://code.visualstudio.com/docs/azure/extensions)).
+Install Azure Extensions if not yet ([How to install](https://code.visualstudio.com/docs/azure/extensions)).
 
 Just deploy like below.
 
