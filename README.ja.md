@@ -56,7 +56,7 @@ dotnet run
 
 ### 3. Azure リソースの作成
 
-`azure-templates/README.md` にある![Deploy to Azure](https://aka.ms/deploytoazurebutton)ボタンをクリックし、Azure にリソースを作成します。
+`azure-templates/README.md` にある[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkohei3110%2Fauth-app-service%2Fmaster%2Fazure-templates%2Fwebapp.json) ボタンをクリックし、Azure にリソースを作成します。
 
 ### 4. Deploy to Web Apps with Visual Studio Code
 
